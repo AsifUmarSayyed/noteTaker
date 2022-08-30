@@ -1,0 +1,164 @@
+a{
+    color: white;
+}
+.navbar-brand{
+    color: white;
+    margin-left: 120px
+}
+.navbar-brand:hover{
+    color: rgb(209, 197, 25);
+}
+
+
+   
+h4{
+    margin: 10px;
+    padding: 0px 20px ;
+  }
+.container{
+  margin: 20px auto;
+  justify-content: center;
+  
+  align-items: center;
+}
+
+p{
+    padding: 0px 20px ;
+}
+.icon{
+  display:none;
+  margin-left: 40%;
+  bottom: 10%;
+}
+
+
+
+.more-button {
+    float: right;
+    font-size: 2em;
+  }
+  
+  .cdk-drop-list {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .cdk-drag-preview {
+    box-sizing: border-box;
+    opacity: 0.5;
+  }
+  
+  .cdk-drag-animating {
+    transition: unset;
+  }
+  
+  .cdk-drag-placeholder {
+    display: none;
+  }
+  
+
+  .internal{
+    
+    cursor: pointer;
+    
+   
+   
+    width: 100%;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: white;
+    border: 2px solid #000;
+  
+  
+    height: 200px;
+  
+  }
+  .internal:hover{
+    cursor: pointer !important; 
+    background-color: rgb(228, 225, 225);
+      
+  }
+  .internal:hover .icon{
+    display: block;
+  }
+
+  .check{
+   width: 20px;
+   height: 20px;
+   border-radius: 10px;
+  }
+button{
+  margin: auto;
+    
+  }
+  .mat-grid-tile-content {
+    top: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+  
+    height: 100%;
+    padding: 0;
+    margin: 10px !important;
+  }
+  .float{
+    position:fixed;
+    padding: 10px;
+    bottom:40px;
+    left: 90%;
+    right:auto;
+    background-color:#0C9;
+    color:#000;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+  }
+  .completed{
+    display: none;
+    position:fixed;
+    padding: 20px;
+    top: 30%;
+    bottom:auto;
+    left: 35%;
+    right: auto;
+    border: 2px solid #0C9;
+    right:auto;
+    background-color:white;
+    color:#000;
+    border-radius:20px;
+    text-align:center;
+
+  }
+  .row{
+margin: 10px;
+  }
+  span{
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
+  i{
+    border-radius: 5px;
+    font-size: 30px;
+    right: 5px;
+    
+    margin: 0px 5px;
+     
+  }
+  i:hover{
+    color: #0C9;
+  }
+  .search{
+    padding: 5px 6px;
+    border-radius: 10px;
+    border: none;
+  }
+  .sortT{
+    margin-right: 10px !important;
+  }
+  button{
+    margin-right: 20px;
+
+}

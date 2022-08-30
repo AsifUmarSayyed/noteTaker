@@ -1,0 +1,32 @@
+.container{
+    border: 2px solid rgb(209, 197, 25);
+    border-radius: 20px;
+    height: 500px;
+    width:500px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+img{
+    margin: 10px;
+    height: 300px !important;
+    width: 200x !important       ;
+
+}  
+p{
+    margin: 20px;
+    font-size: 30px;
+}  
+button:hover{
+    background-color: rgb(235, 204, 68);
+    border: rgb(235, 204, 68);
+    color: black;
+
+}
+form{
+    margin: 30px;
+    
+}
+button{
+    margin-top: 20px;
+}

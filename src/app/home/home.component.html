@@ -1,0 +1,134 @@
+
+<div id="body">
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid">
+
+          
+          <a class="navbar-brand">Note Taker</a>
+          <input
+          type="text"
+          class="search"
+          required
+          name="title"
+          [(ngModel)]="title"
+          (ngModelChange)="search()"
+          placeholder="Search By Title"
+        />
+       
+        <form class="d-flex">
+            
+
+          <button (click)="sort($event)" name="title"  class="btn btn-success">Sort By Title </button>
+          <button (click)="sort($event)" name="date" class="btn btn-success">Sort By Date </button>
+        </form>
+        
+          <form class="d-flex">
+            
+
+            <button (click)="addNote()"  class="btn btn-primary">Add New Note </button>
+          </form>
+        </div>
+      </nav>
+      <div  class="container" >
+        <!-- <ng-container *ngFor="let n of note"  >
+      <div class="note" cdkDrag cdkDragHandle>
+         <div class="show"> 
+            
+        
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+
+              <h4 >{{n.title}}</h4>
+          <p >{{n.date}}</p>
+          <p >{{n.note.substring(0,55)}}...</p> 
+            
+            </div>
+            <div class="flip-card-back">
+              <h1>John Doe</h1>
+              <p>Architect & Engineer</p>
+              <p>We love that guy</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+      </div> class="sortT"  
+     
+    </ng-container> -->
+    
+    <mat-grid-list cols="6"  >
+      <mat-grid-tile *ngFor="let n of note let i = index" >
+        <div class="box" cdkDropList [cdkDropListConnectedTo]="drops" [cdkDropListData]="i">
+          <div
+            cdkDrag
+            (cdkDragEntered)="entered($event)"
+            [cdkDragData]="i"
+            class="dashboard-card"
+            [style.backgroundColor]="'#fff'"
+          >
+          <div class="internal">          
+        
+           
+            
+                <h4>{{n.title.substring(0,5)}}...</h4>
+                
+                  
+
+       
+          <p >{{n.date}}</p>
+          <p >{{n.note.substring(0,8)}}...</p> 
+          <div class="icon">
+          <i class="fa fa-check-circle" (click)="save(n,i)" aria-hidden="true"></i>
+          <i class="fa fa-pencil-square-o" (click)="edit(i)" aria-hidden="true"></i>          
+          <i class="fa fa-trash" (click)="delete(i, n)" aria-hidden="true"></i>
+          </div>
+        </div>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </div>
+
+</div> 
+<div class="completed" id="completed"  *ngIf="count!=0">
+
+  <h4>Completed Notes</h4 >
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Note</th>
+          <th scope="col">uncompleted</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container  *ngFor="let s of savenote let i = index"> 
+        
+      
+        <tr>
+          <th scope="row">{{i+1}}</th>
+          <td>{{s.title}}</td>
+          <td>{{s.date}}</td>
+          <td>{{s.note.substring(0,8)}}...</td>
+          <td><button (click)="uncompleted(i,s)"  class="btn btn-success">-> </button></td>
+
+          <td><button (click)="deletecomp(i,s)"  class="btn btn-danger">X </button></td>
+        </tr>
+      </ng-container>
+      </tbody>
+   
+    </table>
+ 
+
+</div>
+
+
+  <button type="button" (click)="display()" class="float">
+    Completed ({{count}})
+  </button>
+  

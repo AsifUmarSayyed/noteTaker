@@ -1,0 +1,58 @@
+<div class="container" ng-App="myApp">
+    <p>Add New Note</p>
+    
+    <form class="was-validated">
+        <div class="col-mb-12">
+          <label for="validationServer01" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title"  required>
+          <div class="invalid-feedback">
+            Please enter a Title.
+          </div>
+         
+        </div>
+       
+
+        <div class="mb-3">
+          <label for="validationTextarea" class="form-label">Note</label>
+          <textarea class="form-control is-invalid" id="note" placeholder="Required Note" required></textarea>
+        
+        </div>
+        <div class="row">
+        
+        <div class="col-lg-6">
+          <label for="validationServer03" class="form-label">Date</label>
+          <input type="date" class="form-control"  id="date" required>
+          
+        </div>
+        <div class="col-lg-6">
+          <label for="validationServer04" class="form-label">Select Span</label>
+          <select  class="form-select " id="mySelect" (change)="day()"   aria-describedby="validationServer04Feedback" >
+            <option selected  value="">Choose...</option>
+            <option value="1">One Day</option>
+            <option value="2">One Week</option>
+            <option value="3">One Month</option>
+            <option value="4">One Year</option>
+          </select>
+          
+        </div>
+      </div>
+       
+         
+    
+        <button  (click)="add()" type="button" class="btn btn-dark">Add Note</button>
+       
+      </form>
+
+
+
+
+
+      
+
+
+
+
+
+    </div>
+    
+   
